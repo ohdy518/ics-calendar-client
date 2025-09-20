@@ -50,5 +50,6 @@
     <button class="bg-slate-200 hover:bg-slate-300 rounded-lg border border-slate-300 p-1 pre" onclick={() => copyToClipboard(subscriptionLinks.download)}>
         Direct URL 복사
     </button>
+    <div id="spacer" class="w-64"></div>
 </div>
 </div>
