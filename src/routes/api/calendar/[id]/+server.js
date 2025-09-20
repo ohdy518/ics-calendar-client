@@ -14,7 +14,7 @@ export async function GET({ params }) {
 	}
 	
 	try {
-		const filePath = join(process.cwd(), 'src', 'lib', calendars[id]);
+		const filePath = join(process.cwd(), 'static', 'calendars', calendars[id]);
 		const icsContent = readFileSync(filePath, 'utf-8');
 		
 		return new Response(icsContent, {
