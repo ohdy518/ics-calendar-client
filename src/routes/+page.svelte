@@ -1,11 +1,14 @@
 <script>
 	import { DOMAIN, CALENDAR_ID } from '$lib/config.js';
 	
-	const calendarUrl = `${DOMAIN}/api/calendar/${CALENDAR_ID}`;
-	const webcalUrl = calendarUrl.replace('http', 'webcal');
+	// const calendarUrl = `${DOMAIN}/api/calendar/${CALENDAR_ID}`;
+    const calendarUrl = `${DOMAIN}/static/calendars/YHIMS2025.ics`;
+    const webcalUrl = calendarUrl.replace('http', 'webcal');
+	
+	const httpUrl = calendarUrl.replace('https', 'http');
 	
 	const subscriptionLinks = {
-		google: `https://calendar.google.com/calendar/render?cid=${webcalUrl}`,
+		google: `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(httpUrl)}`,
 		apple: webcalUrl,
 		outlook: `https://outlook.live.com/calendar/0/addcalendar?url=${webcalUrl}`,
 		download: calendarUrl
