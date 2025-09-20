@@ -1,9 +1,9 @@
 <script>
 	import { DOMAIN, CALENDAR_ID } from '$lib/config.js';
 	
-	// const calendarUrl = `${DOMAIN}/api/calendar/${CALENDAR_ID}`;
-    const calendarUrl = `${DOMAIN}/static/calendars/YHIMS2025.ics`;
-    const webcalUrl = calendarUrl.replace('http', 'webcal');
+	const calendarUrl = `${DOMAIN}/api/calendar/${CALENDAR_ID}`;
+    // const calendarUrl = `${DOMAIN}/static/calendars/YHIMS2025.ics`;
+    const webcalUrl = calendarUrl.replace('https', 'webcal');
 	
 	const httpUrl = calendarUrl.replace('https', 'http');
 	
